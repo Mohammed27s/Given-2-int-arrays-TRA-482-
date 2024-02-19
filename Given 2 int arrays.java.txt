@@ -1,0 +1,65 @@
+//Given 2 int arrays, a and b, of any length, return a new array with the first element of each array.
+// If either array is length 0, ignore that array.
+
+import  java.util.Scanner;
+public class Arrays {
+
+    public static void main(String[] args){
+
+        Scanner n = new Scanner(System.in);
+
+
+        // This is the array a
+        System.out.println("Enter the size of the first array : ");
+        int aSize = n.nextInt();
+        int[] a = new int[aSize];
+
+        System.out.println("Enter the elements of the first array : ");
+        for(int i = 0; a.length <= aSize; i++){
+
+            a[i] = n.nextInt();
+            
+        }
+
+
+        //This is array b
+        System.out.println("Enter the size of the second array : ");
+        int bSize = n.nextInt();
+        int[] b = new int[bSize];
+
+        System.out.println("Enter the elements of the second array : ");
+        for(int j = 0; b.length <= bSize; j++){
+
+            b[j] = n.nextInt();
+
+        }
+
+
+
+
+        int[] catcher = new int[2];
+
+
+
+        if(a.length <= 0){
+
+            catcher[0] = b[0];
+            System.out.println("The value of index 1 : "+"["+catcher+"]");
+        }
+        else if(b.length <= 0){
+
+            catcher[0] = a[0];
+            System.out.println("The value of index 1 :  "+"["+catcher[0]+"]");
+        }
+        else if(a.length != 0 && b.length != 0 ){
+            catcher[0] = a[0];
+            catcher[1] = b[0];
+            System.out.println("The two int values : "+"["+catcher[0]+"]"+"["+catcher[1]+"]");
+        }
+
+
+
+    }
+
+
+}
